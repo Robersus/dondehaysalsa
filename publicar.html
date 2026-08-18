@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0F">
+<title>Publicar evento | ¿Dónde Hay Salsa?</title>
+<meta name="description" content="Publica gratis tu social, clase, taller, concierto o festival de salsa y llega a más bailadores.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<main>
+<section class="hero" style="padding-bottom:1rem">
+  <div class="container hero__inner">
+    <span class="eyebrow">Gratis · Para organizadores</span>
+    <h1 style="font-size:clamp(2rem,6vw,3.4rem)">Publica tu evento</h1>
+    <p class="hero__sub">Haz que más salseros lo encuentren. Publicar es gratis: nosotros lo revisamos y lo subimos a la cartelera de tu ciudad.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:1rem">
+  <div class="container" style="max-width:900px">
+
+    <div id="intro-publicar">
+      <div class="steps reveal">
+        <div><b>1. Llenas el formulario</b><span>Datos del evento y tu contacto. Toma menos de 3 minutos.</span></div>
+        <div><b>2. Ves cómo queda</b><span>Tu evento se arma al instante con el diseño de la cartelera.</span></div>
+        <div><b>3. Nos lo mandas</b><span>Con un botón nos llega por WhatsApp con toda la información lista.</span></div>
+      </div>
+    </div>
+
+    <form class="form" id="form-publicar" novalidate>
+
+      <div class="formcard reveal">
+        <h3>Sobre el evento</h3>
+        <p>Lo que verá la gente en la tarjeta y en la página del evento.</p>
+        <div class="formgrid">
+          <div class="field col-2">
+            <label for="p-nombre">Nombre del evento *</label>
+            <input class="input" id="p-nombre" type="text" placeholder="Social Salsero del Viernes" required>
+            <span class="error"></span>
+          </div>
+          <div class="field col-2">
+            <label for="p-descripcion">Descripción</label>
+            <textarea class="textarea" id="p-descripcion" placeholder="Cuenta qué va a pasar: clase previa, DJ, orquesta, código de vestimenta, nivel…"></textarea>
+            <span class="hint">Una buena descripción vende el doble. Sé concreto.</span>
+          </div>
+          <div class="field">
+            <label for="p-fecha">Fecha *</label>
+            <input class="input" id="p-fecha" type="date" required>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-hora">Hora *</label>
+            <input class="input" id="p-hora" type="time" value="21:00" required>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-tipo">Tipo de evento *</label>
+            <select class="select" id="p-tipo" required></select>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-precio">Precio (MXN)</label>
+            <input class="input" id="p-precio" type="number" min="0" step="10" placeholder="150">
+            <span class="hint">Déjalo en 0 si la entrada es libre.</span>
+          </div>
+          <div class="field col-2">
+            <label>Ritmos *</label>
+            <div id="p-ritmos" style="display:flex;flex-wrap:wrap;gap:.5rem"></div>
+            <span class="error" id="error-ritmos">Selecciona al menos un ritmo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="formcard reveal">
+        <h3>Dónde</h3>
+        <p>Entre más precisa la dirección, más gente llega.</p>
+        <div class="formgrid">
+          <div class="field">
+            <label for="p-lugar">Lugar *</label>
+            <input class="input" id="p-lugar" type="text" placeholder="Salón Caribe" required>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-ciudad">Ciudad *</label>
+            <select class="select" id="p-ciudad" required></select>
+            <span class="error"></span>
+          </div>
+          <div class="field col-2">
+            <label for="p-direccion">Dirección</label>
+            <input class="input" id="p-direccion" type="text" placeholder="Av. México 1234, Col. 5 de Diciembre">
+          </div>
+        </div>
+      </div>
+
+      <div class="formcard reveal">
+        <h3>Contacto del organizador</h3>
+        <p>Así la gente te escribe para preguntar o reservar.</p>
+        <div class="formgrid">
+          <div class="field">
+            <label for="p-organizador">Nombre del organizador *</label>
+            <input class="input" id="p-organizador" type="text" placeholder="Vallarta Salsa Club" required>
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-whatsapp">WhatsApp</label>
+            <input class="input" id="p-whatsapp" type="tel" inputmode="tel" placeholder="322 123 4567">
+            <span class="error"></span>
+          </div>
+          <div class="field">
+            <label for="p-instagram">Instagram</label>
+            <input class="input" id="p-instagram" type="text" placeholder="@tucuenta">
+          </div>
+          <div class="field">
+            <label for="p-facebook">Facebook</label>
+            <input class="input" id="p-facebook" type="text" placeholder="tupagina">
+          </div>
+          <div class="field col-2">
+            <label for="p-boletos">Link de boletos</label>
+            <input class="input" id="p-boletos" type="url" placeholder="https://…">
+            <span class="hint">Si no vendes en línea, déjalo vacío: el botón "QUIERO IR" mandará a tu WhatsApp.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="formcard reveal">
+        <h3>Flyer</h3>
+        <p>Formato vertical (4:5) se ve mejor en la tarjeta. Máximo 3 MB.</p>
+        <div class="dropzone" id="dropzone" role="button" tabindex="0">
+          <span id="dropzone-texto">Arrastra tu flyer aquí o haz clic para elegirlo</span>
+          <img id="flyer-preview" alt="Vista previa del flyer" hidden>
+        </div>
+        <input type="file" id="p-flyer" accept="image/*" class="sr-only">
+        <p class="hint" style="margin-top:.75rem">Sube solo imágenes de las que tengas los derechos.</p>
+      </div>
+
+      <div style="display:flex;gap:.75rem;flex-wrap:wrap;align-items:center">
+        <button class="btn btn--primary btn--lg" id="btn-enviar" type="submit">PUBLICAR EVENTO</button>
+        <span class="hint">Revisamos cada evento antes de mostrarlo en la cartelera pública.</span>
+      </div>
+    </form>
+
+    <div class="success" id="exito">
+      <span style="font-size:3rem">🎉</span>
+      <h2>¡Tu evento ya está armado!</h2>
+      <p>Así se va a ver en la cartelera. Mándanoslo por WhatsApp con el botón de abajo (va con todos los datos ya escritos) y nosotros lo subimos.</p>
+      <p style="margin-top:1rem"><span class="chip chip--gold" id="exito-detalle"></span></p>
+      <p style="margin-top:1.5rem;display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center">
+        <a class="btn btn--primary" id="exito-whatsapp" href="#" target="_blank" rel="noopener">💬 Enviarlo por WhatsApp</a>
+        <a class="btn btn--ghost" id="exito-ver" href="index.html">Ver cómo quedó</a>
+        <a class="btn btn--ghost" href="publicar.html">Publicar otro</a>
+      </p>
+      <p class="hint" style="margin-top:1.5rem">El flyer se manda aparte por WhatsApp: por seguridad, el navegador no puede enviarlo solo.</p>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/format.js"></script>
+<script src="assets/js/data/cities.js"></script>
+<script src="assets/js/data/categories.js"></script>
+<script src="assets/js/data/events.js"></script>
+<script src="assets/js/core/dataSource.js"></script>
+<script src="assets/js/components/layout.js"></script>
+<script src="assets/js/pages/publish.js"></script>
+</body>
+</html>

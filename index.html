@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>¿Dónde Hay Salsa? — La cartelera salsera de México</title>
+<meta name="description" content="Encuentra sociales, clases, conciertos, festivales y fiestas de salsa y ritmos latinos en Puerto Vallarta y otras ciudades de México. Busca por ciudad, fecha, tipo de evento y ritmo.">
+<meta name="theme-color" content="#0B0B0F">
+<link rel="canonical" href="https://dondehaysalsa.mx/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="¿Dónde Hay Salsa? — La cartelera salsera de México">
+<meta property="og:description" content="Encuentra los eventos, sociales, clases, conciertos y fiestas salseras cerca de ti.">
+<meta property="og:image" content="assets/img/og.svg">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+
+<div id="site-header"></div>
+
+<main>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <span class="eyebrow">💃 La cartelera salsera de México</span>
+      <h1>¿DÓNDE HAY <em>SALSA</em>?</h1>
+      <p class="hero__sub">Encuentra los eventos, sociales, clases, conciertos y fiestas salseras cerca de ti.</p>
+
+      <div class="hero__search" id="hero-search"></div>
+
+      <div class="hero__stats">
+        <div><b id="stat-eventos">—</b><span>eventos en cartelera</span></div>
+        <div><b id="stat-semana">—</b><span>en los próximos 7 días</span></div>
+        <div><b id="stat-ciudades">—</b><span>ciudades activas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CARTELERA ============ -->
+  <section class="section" id="cartelera">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Cartelera</span>
+          <h2>Próximos eventos</h2>
+          <p>Ordenados por fecha. Los eventos destacados aparecen primero.</p>
+        </div>
+        <span class="chip" id="contador">—</span>
+      </div>
+
+      <div class="quickfilters" id="quickfilters" role="group" aria-label="Filtros rápidos por fecha"></div>
+
+      <div id="lista-eventos" class="grid-events" aria-live="polite" aria-busy="true"></div>
+    </div>
+  </section>
+
+  <!-- ============ CIUDADES ============ -->
+  <section class="section" id="ciudades">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Cobertura</span>
+          <h2>Explora por ciudad</h2>
+          <p>Arrancamos en Puerto Vallarta y vamos abriendo el país ciudad por ciudad.</p>
+        </div>
+      </div>
+      <div class="grid-cities" id="lista-ciudades"></div>
+    </div>
+  </section>
+
+  <!-- ============ MAPA ============ -->
+  <section class="section" id="mapa">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Ubicación</span>
+          <h2>Eventos cerca de ti</h2>
+          <p>Vista previa del mapa. En la siguiente versión podrás ver los eventos geolocalizados y calcular tu distancia.</p>
+        </div>
+      </div>
+      <div class="map reveal" id="mapa-pins">
+        <div class="map__label">
+          <b>📍 Puerto Vallarta, Jalisco</b>
+          <span>Mapa interactivo disponible próximamente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ORGANIZADORES ============ -->
+  <section class="section" id="organizadores">
+    <div class="container">
+      <div class="cta reveal">
+        <div>
+          <span class="eyebrow">Para organizadores</span>
+          <h2>¿Organizas eventos?</h2>
+          <p>Haz que más salseros encuentren tu evento. Publicarlo es gratis y aparece en la cartelera de tu ciudad.</p>
+        </div>
+        <a class="btn btn--primary btn--lg" href="publicar.html">PUBLICAR MI EVENTO</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/format.js"></script>
+<script src="assets/js/data/cities.js"></script>
+<script src="assets/js/data/categories.js"></script>
+<script src="assets/js/data/events.js"></script>
+<script src="assets/js/core/dataSource.js"></script>
+<script src="assets/js/components/layout.js"></script>
+<script src="assets/js/components/eventCard.js"></script>
+<script src="assets/js/components/filters.js"></script>
+<script src="assets/js/pages/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0B0F">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages.css">
+<title>Evento | ¿Dónde Hay Salsa?</title>
+<meta name="description" content="Detalle del evento salsero: fecha, hora, lugar, precio y contacto del organizador.">
+<meta property="og:type" content="article">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+  <div class="container">
+    <nav class="breadcrumb" id="breadcrumb" aria-label="Ruta de navegación"></nav>
+    <div class="event" id="evento"></div>
+  </div>
+
+  <section class="section" id="relacionados">
+    <div class="container">
+      <div class="section-head">
+        <div><span class="eyebrow">Sigue bailando</span><h2 id="relacionados-titulo">Más eventos</h2></div>
+      </div>
+      <div id="lista-relacionados" class="grid-events"></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<div class="stickybar" id="stickybar"></div>
+<script src="assets/js/core/config.js"></script>
+<script src="assets/js/core/format.js"></script>
+<script src="assets/js/data/cities.js"></script>
+<script src="assets/js/data/categories.js"></script>
+<script src="assets/js/data/events.js"></script>
+<script src="assets/js/core/dataSource.js"></script>
+<script src="assets/js/components/layout.js"></script>
+<script src="assets/js/components/eventCard.js"></script>
+<script src="assets/js/components/filters.js"></script>
+<script src="assets/js/pages/event.js"></script>
+</body>
+</html>
